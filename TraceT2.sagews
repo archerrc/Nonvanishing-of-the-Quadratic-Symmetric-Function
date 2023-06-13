@@ -1,4 +1,3 @@
-︠d718b6a7-46e3-405e-8022-da45caecca8bs︠
 def P2k(k,t,m): #here k is half of the weight
     Ptot=0
     for j in range (0,k):
@@ -30,8 +29,7 @@ for i in range (1,68):
             print('zero at ', i)
     if i==67:
             print('Done')
-︡2ce85127-1e4e-4d04-9501-0756840ffbd0︡{"stdout":"Done"}︡{"stdout":"\n"}︡{"done":true}
-︠11efe5f0-31aa-4a71-9efb-5f6b0ebae8ab︠
+
 
 
 
