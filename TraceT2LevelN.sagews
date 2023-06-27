@@ -1,4 +1,3 @@
-︠6c4e4c9f-e226-4813-9a75-092491d2d304s︠
 #note that in all these computations N is odd because N needs to be coprime to 2 and 4 for these formulas to be correct
 def omega(n): #this is the number of prime divisors of n
     omegan=len(list(factor(n)))
@@ -44,8 +43,6 @@ def P2k(k,t,m): #here k is half of the weight
         #this is the combinatorial formula given in Chiriac and Jorza's paper "The trace of T2 takes no repeated values"
         Ptot= (-1)^j*binomial(2*k-2-j,j)*m^j*t^(2*k-2-2*j)+Ptot 
     return(Ptot)
-︡fbcc0fe8-0bf1-4501-83e8-1bf0d777e708︡
-︠512682ff-4e69-486d-8b0c-d126693a7a56︠
 
 #for TrT2 and TrT4, these are from the version of the Eichler-Selberg trace formula found in the book "Traces of Hecke Operators"
 def TrT2(k,N): #k is half of the weight and N is the level
@@ -67,13 +64,6 @@ def EigenSum(k,N): #This is sum(a(i)a(j))
     dk=ModularForms(N,2*k).cuspidal_subspace().dimension()
     Eigens=1/2*(A-B)-2^(2*k-2)*dk
     return(Eigens)
-︡86ecd1fb-8f6f-4b30-b88e-f91d921b316d︡
-︠a62fadfa-3e61-4b29-ad97-ea9aab5a83da︠
-︡3d9ce23f-ec9e-4da1-951f-059dfc4c4406︡
-︠6741ddb1-1edb-44c9-9707-fb18707a6aba︠
-︡bd867103-b061-44cf-ae2d-423b42db02ca︡{"done":true}
-︠bb65f681-d024-41a8-a5dd-c8a6f8b327c4︠
-
 
 
 
