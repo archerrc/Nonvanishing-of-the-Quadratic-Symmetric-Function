@@ -1,0 +1,7 @@
+P=Primes() #list of primes
+P.unrank(428) #last prime before e^8
+P.unrank(429) #first prime above 2981
+prod=1
+for i in range (0, 429): #Calculating following Terry Tao's work to find a constant for d(n)<=Cn^(1/8)
+    prod=prod*((8-log(P[i]))/(log(P[i]))+1)/(P[i]^(1/8*((8-log(P[i]))/(log(P[i])))))
+print(N(prod)) #The resultant value is C
