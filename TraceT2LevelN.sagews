@@ -60,6 +60,27 @@ def DimFormula(N,k): #dimension formula for modular forms of leve N and weight 2
     dim=(2*k-1)*(genus-1)+floor(k/2)*epsilon2+floor(2*k/3)*epsilon3+(k-1)*numCusps
     return(dim)
 
+#the next two functions can be used to independently calculate the trace of the second or fourth Hecke operator for any (odd) level and (even integer) weight
+def TrT2(k,N): #k is half of the weight and N is the level, note that mu(t,N)=mu(-t,N) for any t
+    Term2=-1/4*P2k(k,2,2)*(2*mu2(2,N))-1/2*P2k(k,1,2)*(2*mu2(1,N))-1/2*P2k(k,0,2)*mu2(0,N)
+    Term3=-2^(omega(N))
+    Trace2=A2T2(N,k)+Term2+Term3
+    return(Trace2)
+
+def TrT4(k,N):
+    Term2=((2*k-1)/12)*Gamma0(N).index()*4^(k-1)
+    Term3=-1/2*P2k(k,3,4)*(2*mu4(3,N))-1/2*P2k(k,2,4)*(4/3*(2*mu4(2,N)))-P2k(k,1,4)*(2*mu4(1,N))-1/2*P2k(k,0,4)*3/2*mu4(0,N)
+    Term4=-2^(omega(N))-2^(2*k-2)*Gamma0(N).ncusps() #The number of cusps in level N showing up here is interesting
+    Trace4=A2T4(N,k)+Term2+Term3+Term4
+    return(Trace4)
+
+def EigenSum(k,N): #This is sum(a(i)a(j)) where the a(i) are eigenvalues of the trace of the second Hecke operator.
+    A=TrT2(k,N)^2
+    B=TrT4(k,N)
+    dk=DimFormula(N,k)
+    Eigens=1/2*(A-B)-2^(2*k-2)*dk
+    return(Eigens)
+
 def EigenSumCheck(N):
     kmax=1 #these are the highest k-values that need to be checked for a given level.
     Output=[]
