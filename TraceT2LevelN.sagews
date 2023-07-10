@@ -71,6 +71,11 @@ def TrT4(k,N):
     Term2=((2*k-1)/12)*Gamma0(N).index()*4^(k-1)
     Term3=-1/2*P2k(k,3,4)*(2*mu4(3,N))-1/2*P2k(k,2,4)*(4/3*(2*mu4(2,N)))-P2k(k,1,4)*(2*mu4(1,N))-1/2*P2k(k,0,4)*3/2*mu4(0,N)
     Term4=-2^(omega(N))-2^(2*k-2)*Gamma0(N).ncusps() #The number of cusps in level N showing up here is interesting
+    if N%9==0: #considers when gcd(t,N/t)=3
+        if N%27!=0:
+            Term4= Term4 -2^(omega(N))
+        else:
+            Term4= Term4 -2^(omega(N)+1)
     Trace4=A2T4(N,k)+Term2+Term3+Term4
     return(Trace4)
 
@@ -151,6 +156,11 @@ def EigenSumCheck(N):
     for k in range (1,kmax+1):
         TraceT2=-1/4*P2k(k,2,2)*(2*mu2t2)-1/2*P2k(k,1,2)*(2*mu2t1)-1/2*P2k(k,0,2)*mu2t0-2^(omegaN)+A2T2(N,k) #t2 for this weight
         TraceT4=((2*k-1)/12)*Index*4^(k-1)-1/2*P2k(k,3,4)*(2*mu4t3)-1/2*P2k(k,2,4)*(4/3*(2*mu4t2))-P2k(k,1,4)*(2*mu4t1)-1/2*P2k(k,0,4)*3/2*mu4t0-2^(omegaN)-2^(2*k-2)*numCusps+A2T4(N,k)
+        if N%9==0: #considers when gcd(t,N/t)=3
+        if N%27!=0:
+            TraceT4= TraceT4 -2^(omega(N))
+        else:
+            TraceT4= TraceT4 -2^(omega(N)+1)
         if k==1:
             dk=genus
         else:
