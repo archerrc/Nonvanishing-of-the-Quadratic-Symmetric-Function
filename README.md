@@ -1,2 +1,2 @@
-# Nonvanishing-of-the-Quadratic-Symmetric-Function
+# NONVANISHING OF SECOND COEFFICIENTS OF HECKE POLYNOMIALS
 These results are tied to the paper titled "NONVANISHING OF SECOND COEFFICIENTS OF HECKE POLYNOMIALS"
