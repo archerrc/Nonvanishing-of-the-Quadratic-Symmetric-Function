@@ -1,2 +1,2 @@
-# NONVANISHING OF SECOND COEFFICIENTS OF HECKE POLYNOMIALS
-These results are tied to the paper titled "NONVANISHING OF SECOND COEFFICIENTS OF HECKE POLYNOMIALS"
+# Nonvanishing of Second Coefficients of Hecke Polynomials
+These results are tied to the paper titled "Nonvanishing of Second Coefficients of Hecke Polynomials" by Archer Clayton, Helen Dai, Tianyu Ni, Hui Xue, and Jake Zummo.
