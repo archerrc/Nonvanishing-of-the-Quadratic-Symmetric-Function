@@ -1,3 +1,4 @@
+#Note that this is only for level 1. Code that is valid for any odd level is given in the file named TraceT2LevelN
 def P2k(k,t,m): #here k is half of the weight
     Ptot=0
     for j in range (0,k):
