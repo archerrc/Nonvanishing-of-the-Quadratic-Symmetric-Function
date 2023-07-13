@@ -86,8 +86,8 @@ def EigenSum(k,N): #This is sum(a(i)a(j)) where the a(i) are eigenvalues of the 
     Eigens=1/2*(A-B)-2^(2*k-2)*dk
     return(Eigens)
 
-def EigenSumCheck(N):
-    kmax=1 #these are the highest k-values that need to be checked for a given level.
+def EigenSumCheck(N): #This was used for the actual verification
+    kmax=1 #these are the highest k-values that need to be checked for a given level. See the Excel file and the paper for why these were chosen
     Output=[]
     if 1434658<N<5832837:
         kmax=2
