@@ -19,8 +19,10 @@ def EigenSum(k): #This is sum(a(i)a(j))
     A=TrT2(k)^2
     B=TrT4(k)
     dk=floor(k/6)
-    if k%6==1 & k!=1:
+    if k%6==1:
         dk=dk-1
+    if k==1:
+        dk=0
     Eigens=1/2*(A-B)-2^(2*k-2)*dk
     return(Eigens)
 
